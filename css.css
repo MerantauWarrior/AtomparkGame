@@ -1,0 +1,157 @@
+html, body{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+}
+.wrapper{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background: #ffffff url('img/bg.png') center bottom no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+.topline{
+    position: relative;
+}
+.logo{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 2;
+}
+.heading{
+    padding-top: 30px;
+    font-family: 'Creepster', cursive;
+    font-size: 64px;
+    line-height: 1em;
+    text-align: center;
+    color: #E7A328;
+}
+/*elements*/
+.cloud-1,
+.cloud-2,
+.witch,
+.casper-1,
+.casper-2{
+    position: absolute;
+}
+.cloud-1{
+    top: 178px;
+    left: 368px;
+    animation: cloudOne 10s linear 0s alternate 1 forwards;
+}
+.cloud-2{
+    top: 108px;
+    right: 364px;
+    animation: cloudTwo 10s linear 0s alternate 1 forwards;
+}
+.witch{
+    position: absolute;
+    top: 296px;
+    right: -100px;
+    animation: witchFly 5s linear 5s alternate 1 forwards;
+}
+
+/*animations*/
+/*clouds*/
+@keyframes cloudOne {
+    0%{
+        left: 368px;
+    }
+    100%{
+        left: 568px;
+    }
+}
+@-o-keyframes cloudOne {
+    0%{
+        left: 368px;
+    }
+    100%{
+        left: 568px;
+    }
+}
+@-moz-keyframes cloudOne {
+    0%{
+        left: 368px;
+    }
+    100%{
+        left: 568px;
+    }
+}
+@-webkit-keyframes cloudOne {
+    0%{
+        left: 368px;
+    }
+    100%{
+        left: 568px;
+    }
+}
+@keyframes cloudTwo {
+    0%{
+        right: 364px;
+    }
+    100%{
+        right: 564px;
+    }
+}
+@-o-keyframes cloudTwo {
+    0%{
+        right: 364px;
+    }
+    100%{
+        right: 564px;
+    }
+}
+@-moz-keyframes cloudTwo {
+    0%{
+        right: 364px;
+    }
+    100%{
+        right: 564px;
+    }
+}
+@-webkit-keyframes cloudTwo {
+    0%{
+        right: 364px;
+    }
+    100%{
+        right: 564px;
+    }
+}
+/*witch*/
+@keyframes witchFly {
+    0%{
+        right: 0;
+    }
+    100%{
+        right: 100%;
+    }
+}
+@-moz-keyframes witchFly {
+    0%{
+        right: 0;
+    }
+    100%{
+        right: 100%;
+    }
+}
+@-o-keyframes witchFly {
+    0%{
+        right: -100px;
+    }
+    100%{
+        right: 100%;
+    }
+}
+@-webkit-keyframes witchFly {
+    0%{
+        right: 0;
+    }
+    100%{
+        right: 100%;
+    }
+}
