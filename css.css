@@ -65,6 +65,23 @@ body{
     right: -100px;
     animation: witchFly 5s linear 5s alternate 1 forwards;
 }
+.helper{
+    position: absolute;
+    top: -999px;
+    left: -999px;
+    display: inline-flex;
+    align-items: center;
+    z-index: 99;
+}
+.helper__icon{
+    margin-right: 10px;
+}
+.helper__text{
+    max-width: 160px;
+    font-size: 16px;
+    line-height: 20px;
+    color: #FFFFFF;
+}
 
 /*animations*/
 /*caspers*/
