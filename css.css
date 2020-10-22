@@ -39,6 +39,16 @@ body{
 .casper-2{
     position: absolute;
 }
+.casper-1{
+    top: 353px;
+    left: 412px;
+    animation: casperOne 5s linear 0s alternate infinite forwards;
+}
+.casper-2{
+    top: 496px;
+    right: 416px;
+    animation: casperTwo 5s linear 0s alternate infinite forwards;
+}
 .cloud-1{
     top: 178px;
     left: 368px;
@@ -57,6 +67,35 @@ body{
 }
 
 /*animations*/
+/*caspers*/
+@keyframes casperOne {
+    0%{
+        top: 353px;
+        left: 412px;
+    }
+    50%{
+        top: 253px;
+        left: 312px;
+    }
+    100%{
+        top: 403px;
+        left: 462px;
+    }
+}
+@keyframes casperTwo {
+    0%{
+        top: 496px;
+        right: 416px;
+    }
+    50%{
+        top: 396px;
+        right: 316px;
+    }
+    100%{
+        top: 446px;
+        right: 466px;
+    }
+}
 /*clouds*/
 @keyframes cloudOne {
     0%{
