@@ -12,7 +12,7 @@ $( document ).ready(function() {
       mouseStoped = true;
       hideHelper = false;
       $(".helper").css({left:e.pageX, top:e.pageY});
-    }, 1000);
+    }, 3000);
   });
   $(document).click(function () {
     hideHelper = true;
