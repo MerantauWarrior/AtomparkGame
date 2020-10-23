@@ -14,28 +14,33 @@
 </head>
 <body>
 <div class="wrapper">
+<!--TOPLINE-->
   <div class="topline">
     <a href="#" class="logo"><img src="img/logo.svg" alt="atompark"></a>
     <div class="heading">Atomic Halloween Game</div>
   </div>
 
+<!--TOWER-->
+
   <div class="tower">
     <div class="tower-window tower-window--3">
       <div class="tower-window__door"></div>
     </div>
-    <div class="tower-window tower-window--4">
+    <div class="tower-window tower-window--4" data-id="dis40">
       <div class="tower-window__door"></div>
     </div>
     <div class="tower-window tower-window--5">
       <div class="tower-window__door"></div>
     </div>
-    <div class="tower-window tower-window--6">
+    <div class="tower-window tower-window--6" data-id="dis50">
       <div class="tower-window__door"></div>
     </div>
     <div class="tower-window tower-window--7">
       <div class="tower-window__door"></div>
     </div>
   </div>
+
+<!--ELEMENTS-->
 
   <div class="cloud-1">
     <svg width="365" height="118" viewBox="0 0 365 118" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -129,6 +134,62 @@
     </svg>
   </div>
   <div class="helper">испытай удачу! кликни по окошкам - получи скидку</div>
+
+<!--MODALS-->
+
+  <div class="modal modal-discount" id="dis30">
+    <div class="modal-close">
+      <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M1 1L17.6692 17.6692" stroke="#81859C" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M17.6692 1L1 17.6692" stroke="#81859C" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+    <div class="modal__title">Вот это удача!</div>
+    <div class="dicount">СКИДКА -30%</div>
+    <div class="btn js-get-discount" data-id="thirty">ПОЛУЧИТЬ СКИДКУ</div>
+  </div>
+
+  <div class="modal modal-discount" id="dis40">
+    <div class="modal-close">
+      <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M1 1L17.6692 17.6692" stroke="#81859C" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M17.6692 1L1 17.6692" stroke="#81859C" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+    <div class="modal__title">Да Вы просто счастливчик!</div>
+    <div class="dicount">СКИДКА -40%</div>
+    <div class="btn js-get-discount" data-id="fourty">ПОЛУЧИТЬ СКИДКУ</div>
+  </div>
+
+  <div class="modal modal-discount" id="dis50">
+    <div class="modal-close">
+      <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M1 1L17.6692 17.6692" stroke="#81859C" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M17.6692 1L1 17.6692" stroke="#81859C" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+    <div class="modal__title">Вы победили!</div>
+    <div class="dicount">СКИДКА -50%</div>
+    <div class="btn js-get-discount" data-id="fifty">ПОЛУЧИТЬ СКИДКУ</div>
+  </div>
+
+<!--BOTTOMLINE-->
+
+  <div class="bottomline">
+    <div class="bottomline-item" id="thirty">
+      <div class="bottomline-item__text">Игра закочилась, но Ваша <span class="dicount">СКИДКА -30%</span> доступна к получению</div>
+      <a href="#" class="btn js-get-discount">ПОЛУЧИТЬ СКИДКУ</a>
+    </div>
+    <div class="bottomline-item" id="fourty">
+      <div class="bottomline-item__text">Игра закочилась, но Ваша <span class="dicount">СКИДКА -40%</span> доступна к получению</div>
+      <a href="#" class="btn js-get-discount">ПОЛУЧИТЬ СКИДКУ</a>
+    </div>
+    <div class="bottomline-item" id="fifty">
+      <div class="bottomline-item__text">Игра закочилась, но Ваша <span class="dicount">СКИДКА -50%</span> доступна к получению</div>
+      <a href="#" class="btn js-get-discount">ПОЛУЧИТЬ СКИДКУ</a>
+    </div>
+  </div>
+
 </div>
 </body>
 </html>

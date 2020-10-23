@@ -19,4 +19,20 @@ $( document ).ready(function() {
     $(".helper").css({left:'-999px', top:'-999px'});
   })
 
+  // MODALS
+  $('.modal-close').click(function () {
+    $(this).closest('.modal').removeClass('modal_opened');
+  });
+  // OPEN MODALS
+  $('.tower-window--2, .tower-window--4, .tower-window--6').click(function () {
+    $('.modal-discount#'+$(this).data('id')).addClass('modal_opened');
+  });
+  // SHOW DISCOUNTS
+  $('.js-get-discount').click(function () {
+    $(this).closest('.modal').removeClass('modal_opened');
+    $('.bottomline').show();
+    $('.bottomline-item#'+$(this).data('id')).addClass('bottomline-item_current');
+
+  });
+
 });

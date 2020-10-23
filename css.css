@@ -7,6 +7,11 @@ body{
     font-family: 'Roboto', sans-serif;
     cursor: url("img/cursor.png"), auto;
 }
+*, *:after, *:before{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
 img, svg{
     display: block;
     max-width: 100%;
@@ -271,4 +276,104 @@ img, svg{
     100%{
         right: 100%;
     }
+}
+/*modals*/
+.modal{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #F0E9F4;
+    box-shadow: -4px 4px 20px rgba(39, 38, 82, 0.2);
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    cursor: default;
+    z-index: 999;
+}
+.modal_opened{
+    display: flex;
+}
+.modal-discount{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    max-width: 300px;
+    height: 237px;
+    padding: 34px 47px;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+.modal-close{
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    cursor: pointer;
+}
+.modal__title{
+    font-weight: 700;
+    font-size: 21px;
+    line-height: 25px;
+    text-align: center;
+    color: #2B2A5D;
+}
+.dicount{
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 35px;
+    text-transform: uppercase;
+    color: #7351AC;
+}
+.btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 205px;
+    height: 50px;
+    -webkit-border-radius: 45px;
+    -moz-border-radius: 45px;
+    border-radius: 45px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: #2B2A5D;
+    text-decoration: none;
+    background: -o-linear-gradient(357.85deg, #DE4F45 15.86%, #E59A30 91.06%), #E7A129;
+    background: linear-gradient(92.15deg, #DE4F45 15.86%, #E59A30 91.06%), #E7A129;
+    cursor: pointer;
+}
+.btn:hover{
+    background: -o-linear-gradient(357.85deg, #E59A30 15.86%, #DE4F45 91.06%), #E7A129;
+    background: linear-gradient(92.15deg, #E59A30 15.86%, #DE4F45 91.06%), #E7A129;
+}
+/*bottomline*/
+.bottomline{
+    display: none;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 32px 15px;
+    background-color: #F0E9F4;
+    z-index: 998;
+}
+.bottomline-item{
+    display: none;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.bottomline-item_current{
+    display: flex;
+}
+.bottomline-item__text{
+    margin-right: 48px;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 35px;
+    color: #2B2A5D;
 }
