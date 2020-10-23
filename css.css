@@ -112,6 +112,7 @@ img, svg{
 .casper-1,
 .casper-2{
     position: absolute;
+    z-index: 1;
 }
 .casper-1{
     top: 353px;
