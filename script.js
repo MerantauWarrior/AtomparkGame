@@ -32,7 +32,14 @@ $( document ).ready(function() {
     $(this).closest('.modal').removeClass('modal_opened');
     $('.bottomline').show();
     $('.bottomline-item#'+$(this).data('id')).addClass('bottomline-item_current');
-
+  });
+  $('.tower-window--1, .tower-window--3, .tower-window--5, .tower-window--7').click(function () {
+    $('.modal-lose').removeClass('modal_opened');
+    $(this).children('.modal-lose').addClass('modal_opened');
+  });
+  $('.js-play-next').click(function (e) {
+    e.stopPropagation();
+    $(this).closest('.modal').removeClass('modal_opened');
   });
 
 });

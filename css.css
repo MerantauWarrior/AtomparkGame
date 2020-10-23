@@ -36,6 +36,36 @@ img, svg{
     background-size: contain;
     z-index: 100;
 }
+.dicount{
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 35px;
+    text-transform: uppercase;
+    color: #7351AC;
+}
+.btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 205px;
+    height: 50px;
+    -webkit-border-radius: 45px;
+    -moz-border-radius: 45px;
+    border-radius: 45px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: #2B2A5D;
+    text-decoration: none;
+    background: -o-linear-gradient(357.85deg, #DE4F45 15.86%, #E59A30 91.06%), #E7A129;
+    background: linear-gradient(92.15deg, #DE4F45 15.86%, #E59A30 91.06%), #E7A129;
+    cursor: pointer;
+}
+.btn:hover{
+    background: -o-linear-gradient(357.85deg, #E59A30 15.86%, #DE4F45 91.06%), #E7A129;
+    background: linear-gradient(92.15deg, #E59A30 15.86%, #DE4F45 91.06%), #E7A129;
+}
+/*topline*/
 .topline{
     position: relative;
 }
@@ -81,6 +111,20 @@ img, svg{
     height: 100%;
     background: transparent url('img/door.svg') center center no-repeat;
     background-size: contain;
+}
+.tower-window--1 .tower-window__door{
+    background: transparent url('img/door-1.svg') center center no-repeat;
+}
+.tower-window--1{
+    top: 7%;
+    width: 12%;
+    height: 5%;
+    margin-left: 2%;
+}
+.tower-window--2{
+    top: 15%;
+    width: 13%;
+    height: 6%;
 }
 .tower-window--3,
 .tower-window--4,
@@ -280,6 +324,7 @@ img, svg{
 }
 /*modals*/
 .modal{
+    position: absolute;
     display: none;
     flex-direction: column;
     align-items: center;
@@ -296,7 +341,6 @@ img, svg{
     display: flex;
 }
 .modal-discount{
-    position: absolute;
     top: 50%;
     left: 50%;
     width: 100%;
@@ -308,6 +352,41 @@ img, svg{
     -ms-transform: translate(-50%, -50%);
     -o-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
+}
+.modal-lose{
+    width: 340px;
+    height: 176px;
+    padding: 23px 18px 29px 18px;
+}
+.modal-lose:after{
+    content: "";
+    position: absolute;
+    top: 15px;
+    right: -25px;
+    width: 0;
+    height: 0;
+    border-top: 23px solid #F0E9F4;
+    border-right: 26px solid transparent;
+}
+.tower-window--7 .modal-lose:after{
+    top: auto;
+    bottom: 15px;
+    border-top: none;
+    border-bottom: 23px solid #F0E9F4;
+    border-right: 26px solid transparent;
+}
+.tower-window--1 .modal-lose{
+    top: -50px;
+    right: 130px;
+}
+.tower-window--3 .modal-lose,
+.tower-window--5 .modal-lose{
+    top: 0;
+    right: 80px;
+}
+.tower-window--7 .modal-lose{
+    bottom: 10px;
+    right: 80px;
 }
 .modal-close{
     position: absolute;
@@ -322,34 +401,15 @@ img, svg{
     text-align: center;
     color: #2B2A5D;
 }
-.dicount{
-    font-weight: 700;
-    font-size: 30px;
-    line-height: 35px;
-    text-transform: uppercase;
-    color: #7351AC;
+.modal-lose .modal__title{
+    font-size: 18px;
+    line-height: 21px;
 }
-.btn{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 205px;
-    height: 50px;
-    -webkit-border-radius: 45px;
-    -moz-border-radius: 45px;
-    border-radius: 45px;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 19px;
+.modal__text{
+    font-size: 14px;
+    line-height: 24px;
+    text-align: center;
     color: #2B2A5D;
-    text-decoration: none;
-    background: -o-linear-gradient(357.85deg, #DE4F45 15.86%, #E59A30 91.06%), #E7A129;
-    background: linear-gradient(92.15deg, #DE4F45 15.86%, #E59A30 91.06%), #E7A129;
-    cursor: pointer;
-}
-.btn:hover{
-    background: -o-linear-gradient(357.85deg, #E59A30 15.86%, #DE4F45 91.06%), #E7A129;
-    background: linear-gradient(92.15deg, #E59A30 15.86%, #DE4F45 91.06%), #E7A129;
 }
 /*bottomline*/
 .bottomline{
