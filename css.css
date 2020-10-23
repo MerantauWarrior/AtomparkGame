@@ -5,6 +5,11 @@ html, body{
 }
 body{
     font-family: 'Roboto', sans-serif;
+    cursor: url("img/cursor.png"), auto;
+}
+img, svg{
+    display: block;
+    max-width: 100%;
 }
 .wrapper{
     position: relative;
@@ -13,6 +18,18 @@ body{
     background: #ffffff url('img/bg.png') center bottom no-repeat;
     background-size: cover;
     overflow: hidden;
+}
+.wrapper:before{
+    content: "";
+    position: absolute;
+    bottom: 64px;
+    left: 50%;
+    width: 1731px;
+    height: 104px;
+    margin-left: -895px;
+    background: transparent url('img/bg-bushes.png') center bottom no-repeat;
+    background-size: contain;
+    z-index: 100;
 }
 .topline{
     position: relative;
@@ -31,6 +48,58 @@ body{
     text-align: center;
     color: #E7A328;
 }
+/*tower*/
+.tower{
+    position: absolute;
+    bottom: 100px;
+    left: 50%;
+    width: 260px;
+    /*height: 686px;*/
+    height: 75vh;
+    margin-left: -130px;
+    background: transparent url('img/tower.png') center bottom no-repeat;
+    background-size: contain;
+    z-index: 99;
+}
+.tower-window{
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translate(-50%, 0);
+    -moz-transform: translate(-50%, 0);
+    -ms-transform: translate(-50%, 0);
+    -o-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+    z-index: 100;
+}
+.tower-window__door{
+    width: 100%;
+    height: 100%;
+    background: transparent url('img/door.svg') center center no-repeat;
+    background-size: contain;
+}
+.tower-window--3,
+.tower-window--4,
+.tower-window--5,
+.tower-window--6,
+.tower-window--7{
+    width: 20%;
+    height: 8%;
+}
+.tower-window--3{
+    top: 26.5%;
+}
+.tower-window--4{
+    top: 38.8%;
+}
+.tower-window--5{
+    top: 51.1%;
+}
+.tower-window--6{
+    top: 63.5%;
+}
+.tower-window--7{
+    top: 75.9%;
+}
 /*elements*/
 .cloud-1,
 .cloud-2,
@@ -42,47 +111,39 @@ body{
 .casper-1{
     top: 353px;
     left: 412px;
-    animation: casperOne 5s linear 0s alternate infinite forwards;
+    animation: casperOne 15s linear 0s alternate infinite forwards;
 }
 .casper-2{
     top: 496px;
     right: 416px;
-    animation: casperTwo 5s linear 0s alternate infinite forwards;
+    animation: casperTwo 15s linear 0s alternate infinite forwards;
 }
 .cloud-1{
     top: 178px;
     left: 368px;
-    animation: cloudOne 10s linear 0s alternate 1 forwards;
+    animation: cloudOne 15s linear 0s alternate 1 forwards;
 }
 .cloud-2{
     top: 108px;
     right: 364px;
-    animation: cloudTwo 10s linear 0s alternate 1 forwards;
+    animation: cloudTwo 15s linear 0s alternate 1 forwards;
 }
 .witch{
     position: absolute;
     top: 296px;
     right: -100px;
-    animation: witchFly 5s linear 5s alternate 1 forwards;
+    animation: witchFly 10s linear 5s alternate 1 forwards;
 }
 .helper{
     position: absolute;
     top: -999px;
     left: -999px;
-    display: inline-flex;
-    align-items: center;
-    z-index: 99;
-}
-.helper__icon{
-    margin-right: 10px;
-}
-.helper__text{
-    max-width: 160px;
+    max-width: 170px;
     font-size: 16px;
     line-height: 20px;
     color: #FFFFFF;
+    z-index: 102;
 }
-
 /*animations*/
 /*caspers*/
 @keyframes casperOne {
@@ -119,7 +180,7 @@ body{
         left: 368px;
     }
     100%{
-        left: 568px;
+        left: 668px;
     }
 }
 @-o-keyframes cloudOne {
@@ -127,7 +188,7 @@ body{
         left: 368px;
     }
     100%{
-        left: 568px;
+        left: 668px;
     }
 }
 @-moz-keyframes cloudOne {
@@ -135,7 +196,7 @@ body{
         left: 368px;
     }
     100%{
-        left: 568px;
+        left: 668px;
     }
 }
 @-webkit-keyframes cloudOne {
@@ -143,7 +204,7 @@ body{
         left: 368px;
     }
     100%{
-        left: 568px;
+        left: 668px;
     }
 }
 @keyframes cloudTwo {
@@ -151,7 +212,7 @@ body{
         right: 364px;
     }
     100%{
-        right: 564px;
+        right: 664px;
     }
 }
 @-o-keyframes cloudTwo {
@@ -159,7 +220,7 @@ body{
         right: 364px;
     }
     100%{
-        right: 564px;
+        right: 664px;
     }
 }
 @-moz-keyframes cloudTwo {
@@ -167,7 +228,7 @@ body{
         right: 364px;
     }
     100%{
-        right: 564px;
+        right: 664px;
     }
 }
 @-webkit-keyframes cloudTwo {
@@ -175,7 +236,7 @@ body{
         right: 364px;
     }
     100%{
-        right: 564px;
+        right: 664px;
     }
 }
 /*witch*/

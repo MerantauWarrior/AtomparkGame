@@ -5,13 +5,13 @@ $( document ).ready(function() {
   var hideHelper = false;
   $(document).mousemove(function(e){
     if(mouseStoped === true && hideHelper === false){
-      $(".helper").css({left:e.pageX, top:e.pageY});
+      $(".helper").css({left:e.pageX+46, top:e.pageY});
     }
     clearTimeout(timeout);
     timeout = setTimeout(function(){
       mouseStoped = true;
       hideHelper = false;
-      $(".helper").css({left:e.pageX, top:e.pageY});
+      $(".helper").css({left:e.pageX+46, top:e.pageY});
     }, 3000);
   });
   $(document).click(function () {
