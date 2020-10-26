@@ -54,6 +54,9 @@ $( document ).ready(function() {
       alert('You already have a discount:)')
       return false;
     }
+    if($(this).hasClass('clicked')){
+      return false;
+    }
     if($(this).hasClass('tower-window--7')){
       tries+1;
     }else {
@@ -80,6 +83,7 @@ $( document ).ready(function() {
       return false;
     }
     $('.modal').removeClass('modal_opened');
+    $(this).addClass('clicked');
     $(this).find('.tower-window__door').addClass('tower-window__door_opened');
     $(this).find('.monster').addClass('monster_visible');
     $(this).children('.modal-lose').prepend(triesText);
