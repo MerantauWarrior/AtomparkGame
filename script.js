@@ -67,8 +67,8 @@ $( document ).ready(function() {
     var triesText = '';
     if(tries === 2){
       if(lang === 'en'){
-        triesText = '<div class="modal__title">Уупс! К сожалению, не то окно:(</div>\n' +
-          '        <div class="modal__text">Попробуйте еще раз</div>' +
+        triesText = '<div class="modal__title">Oops! Wrong window :(</div>\n' +
+          '        <div class="modal__text">Make another try</div>' +
           '<div class="btn js-play-next">Play again</div>';
       }else{
         triesText = '<div class="modal__title">Уупс! К сожалению, не то окно:(</div>\n' +
@@ -78,8 +78,8 @@ $( document ).ready(function() {
     }
     if(tries === 1){
       if(lang === 'en'){
-        triesText = '<div class="modal__title">Увы и Ах, но промах...</div>\n' +
-          '        <div class="modal__text">У вас на одну попытку меньше</div>' +
+        triesText = '<div class="modal__title">Alas and ah, you\'ve missed</div>\n' +
+          '        <div class="modal__text">Make another try</div>' +
           '<div class="btn js-play-next">Play again</div>';
 
       }else{
@@ -90,8 +90,8 @@ $( document ).ready(function() {
     }
     if(tries === 0){
       if(lang === 'en'){
-        triesText = '<div class="modal__title">Хмм...может сегодня не ваш день?</div>\n' +
-          '        <div class="modal__text">Поищите скидку в другом окошке</div>' +
+        triesText = '<div class="modal__title">Maybe this is not your day</div>\n' +
+          '        <div class="modal__text">Try another window</div>' +
           '<div class="btn js-play-next">Play again</div>';
 
       }else{
@@ -102,8 +102,8 @@ $( document ).ready(function() {
     }
     if($(this).hasClass('tower-window--7')){
       if(lang === 'en'){
-        triesText = '<div class="modal__title">Миау конечно...Ну да ладно!</div>\n' +
-          '        <div class="modal__text">От победы вас отделяет одно окошко</div>' +
+        triesText = '<div class="modal__title">That\'s meowly sad</div>\n' +
+          '        <div class="modal__text">Keep looking in another window</div>' +
           '<div class="btn js-play-next">Play again</div>';
 
       }else{
