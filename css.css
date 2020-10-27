@@ -246,12 +246,12 @@ img, svg{
 .cloud-1{
     top: 178px;
     left: 368px;
-    animation: cloudOne 15s linear 0s alternate 1 forwards;
+    animation: cloudOne 120s linear 0s alternate 1 forwards;
 }
 .cloud-2{
     top: 108px;
     right: 364px;
-    animation: cloudTwo 15s linear 0s alternate 1 forwards;
+    animation: cloudTwo 60s linear 0s alternate 1 forwards;
 }
 .witch{
     position: absolute;
@@ -263,9 +263,9 @@ img, svg{
     position: absolute;
     top: -999px;
     left: -999px;
-    max-width: 170px;
-    font-size: 16px;
-    line-height: 20px;
+    max-width: 150px;
+    font-size: 14px;
+    line-height: 18px;
     color: #FFFFFF;
     z-index: 102;
 }
@@ -485,64 +485,88 @@ img, svg{
     0%{
         left: 368px;
     }
-    100%{
+    50%{
         left: 668px;
+    }
+    100%{
+        left: 368px;
     }
 }
 @-o-keyframes cloudOne {
     0%{
         left: 368px;
     }
-    100%{
+    50%{
         left: 668px;
+    }
+    100%{
+        left: 368px;
     }
 }
 @-moz-keyframes cloudOne {
     0%{
         left: 368px;
     }
-    100%{
+    50%{
         left: 668px;
+    }
+    100%{
+        left: 368px;
     }
 }
 @-webkit-keyframes cloudOne {
     0%{
         left: 368px;
     }
-    100%{
+    50%{
         left: 668px;
+    }
+    100%{
+        left: 368px;
     }
 }
 @keyframes cloudTwo {
     0%{
         right: 364px;
     }
-    100%{
+    50%{
         right: 664px;
+    }
+    100%{
+        right: 364px;
     }
 }
 @-o-keyframes cloudTwo {
     0%{
         right: 364px;
     }
-    100%{
+    50%{
         right: 664px;
+    }
+    100%{
+        right: 364px;
     }
 }
 @-moz-keyframes cloudTwo {
     0%{
         right: 364px;
     }
-    100%{
+    50%{
         right: 664px;
+    }
+    100%{
+        right: 364px;
     }
 }
 @-webkit-keyframes cloudTwo {
     0%{
         right: 364px;
     }
-    100%{
+    50%{
         right: 664px;
+    }
+    100%{
+        right: 364px;
     }
 }
 /*witch*/
