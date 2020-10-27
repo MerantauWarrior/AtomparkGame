@@ -1,6 +1,7 @@
 $( document ).ready(function() {
 
   // GAME
+  var lang = $('html').attr('lang');
   var tries = 3;
   var endGame = false;
 
@@ -65,24 +66,51 @@ $( document ).ready(function() {
     }
     var triesText = '';
     if(tries === 2){
-      triesText = '<div class="modal__title">Уупс! К сожалению, не то окно:(</div>\n' +
-        '        <div class="modal__text">Попробуйте еще раз</div>' +
-        '<div class="btn js-play-next">ИГРАТЬ ДАЛЬШЕ</div>';
+      if(lang === 'en'){
+        triesText = '<div class="modal__title">Уупс! К сожалению, не то окно:(</div>\n' +
+          '        <div class="modal__text">Попробуйте еще раз</div>' +
+          '<div class="btn js-play-next">Play again</div>';
+      }else{
+        triesText = '<div class="modal__title">Уупс! К сожалению, не то окно:(</div>\n' +
+          '        <div class="modal__text">Попробуйте еще раз</div>' +
+          '<div class="btn js-play-next">ИГРАТЬ ДАЛЬШЕ</div>';
+      }
     }
     if(tries === 1){
-      triesText = '<div class="modal__title">Увы и Ах, но промах...</div>\n' +
-        '        <div class="modal__text">У вас на одну попытку меньше</div>' +
-        '<div class="btn js-play-next">ИГРАТЬ ДАЛЬШЕ</div>';
+      if(lang === 'en'){
+        triesText = '<div class="modal__title">Увы и Ах, но промах...</div>\n' +
+          '        <div class="modal__text">У вас на одну попытку меньше</div>' +
+          '<div class="btn js-play-next">Play again</div>';
+
+      }else{
+        triesText = '<div class="modal__title">Увы и Ах, но промах...</div>\n' +
+          '        <div class="modal__text">У вас на одну попытку меньше</div>' +
+          '<div class="btn js-play-next">ИГРАТЬ ДАЛЬШЕ</div>';
+      }
     }
     if(tries === 0){
-      triesText = '<div class="modal__title">Хмм...может сегодня не ваш день?</div>\n' +
-        '        <div class="modal__text">Поищите скидку в другом окошке</div>' +
-        '<div class="btn js-play-next">ИГРАТЬ ДАЛЬШЕ</div>';
+      if(lang === 'en'){
+        triesText = '<div class="modal__title">Хмм...может сегодня не ваш день?</div>\n' +
+          '        <div class="modal__text">Поищите скидку в другом окошке</div>' +
+          '<div class="btn js-play-next">Play again</div>';
+
+      }else{
+        triesText = '<div class="modal__title">Хмм...может сегодня не ваш день?</div>\n' +
+          '        <div class="modal__text">Поищите скидку в другом окошке</div>' +
+          '<div class="btn js-play-next">ИГРАТЬ ДАЛЬШЕ</div>';
+      }
     }
     if($(this).hasClass('tower-window--7')){
-      triesText = '<div class="modal__title">Миау конечно...Ну да ладно!</div>\n' +
-        '        <div class="modal__text">От победы вас отделяет одно окошко</div>' +
-        '<div class="btn js-play-next">ИГРАТЬ ДАЛЬШЕ</div>';
+      if(lang === 'en'){
+        triesText = '<div class="modal__title">Миау конечно...Ну да ладно!</div>\n' +
+          '        <div class="modal__text">От победы вас отделяет одно окошко</div>' +
+          '<div class="btn js-play-next">Play again</div>';
+
+      }else{
+        triesText = '<div class="modal__title">Миау конечно...Ну да ладно!</div>\n' +
+          '        <div class="modal__text">От победы вас отделяет одно окошко</div>' +
+          '<div class="btn js-play-next">ИГРАТЬ ДАЛЬШЕ</div>';
+      }
     }
     if(tries < 0){
       alert('No attemps left :(')
@@ -93,6 +121,21 @@ $( document ).ready(function() {
     $(this).find('.tower-window__door').addClass('tower-window__door_opened');
     $(this).find('.monster').addClass('monster_visible');
     $('.modal-lose').html('');
+    $('.modal-lose').removeClass (function (index, className) {
+      return (className.match (/(^|\s)tower-window-\S+/g) || []).join(' ');
+    });
+    if($(this).hasClass('tower-window--1')){
+      $('.modal-lose').addClass('tower-window-1');
+    }
+    if($(this).hasClass('tower-window--3')){
+      $('.modal-lose').addClass('tower-window-3');
+    }
+    if($(this).hasClass('tower-window--5')){
+      $('.modal-lose').addClass('tower-window-5');
+    }
+    if($(this).hasClass('tower-window--7')){
+      $('.modal-lose').addClass('tower-window-7');
+    }
     $('.modal-lose').prepend(triesText);
     $('.modal-lose').delay(1000).queue(function(next){
       $(this).addClass('modal_opened');

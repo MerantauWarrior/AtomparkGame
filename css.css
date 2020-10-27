@@ -62,6 +62,7 @@ img, svg{
     font-size: 16px;
     line-height: 19px;
     color: #2B2A5D;
+    text-transform: uppercase;
     text-decoration: none;
     background: -o-linear-gradient(357.85deg, #DE4F45 15.86%, #E59A30 91.06%), #E7A129;
     background: linear-gradient(92.15deg, #DE4F45 15.86%, #E59A30 91.06%), #E7A129;
@@ -638,6 +639,25 @@ img, svg{
     height: 176px;
     padding: 23px 18px 29px 18px;
 }
+.modal-lose.tower-window-1{
+    top: 15vh;
+    right: 60%;
+}
+.modal-lose.tower-window-3{
+    top: 35vh;
+    right: 55%;
+}
+.modal-lose.tower-window-5{
+    top: 55vh;
+    right: 55%;
+}
+.modal-lose.tower-window-7{
+    bottom: 23vh;
+    right: 55%;
+}
+.modal-lose.tower-window-3{}
+.modal-lose.tower-window-5{}
+.modal-lose.tower-window-7{}
 .modal-lose:after{
     content: "";
     position: absolute;
@@ -648,26 +668,14 @@ img, svg{
     border-top: 23px solid #F0E9F4;
     border-right: 26px solid transparent;
 }
-.tower-window--7 .modal-lose:after{
+.modal-lose.tower-window-7:after{
     top: auto;
     bottom: 15px;
     border-top: none;
     border-bottom: 23px solid #F0E9F4;
     border-right: 26px solid transparent;
 }
-.tower-window--1 .modal-lose{
-    top: -50px;
-    right: 130px;
-}
-.tower-window--3 .modal-lose,
-.tower-window--5 .modal-lose{
-    top: 0;
-    right: 80px;
-}
-.tower-window--7 .modal-lose{
-    bottom: 10px;
-    right: 80px;
-}
+
 .modal-close{
     position: absolute;
     top: 15px;
@@ -776,20 +784,7 @@ img, svg{
     .tower-window.clicked{
         z-index: 101;
     }
-    .tower-window--1 .modal-lose,
-    .tower-window--3 .modal-lose,
-    .tower-window--5 .modal-lose{
-        top: 100%;
-        left: 50%;
-        right: auto;
-        -webkit-transform: translate(-50%, 0);
-        -moz-transform: translate(-50%, 0);
-        -ms-transform: translate(-50%, 0);
-        -o-transform: translate(-50%, 0);
-        transform: translate(-50%, 0);
-    }
-    .tower-window--7 .modal-lose{
-        bottom: 100%;
+    .modal-lose{
         left: 50%;
         right: auto;
         -webkit-transform: translate(-50%, 0);
