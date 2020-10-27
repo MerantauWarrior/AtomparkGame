@@ -6,26 +6,28 @@ $( document ).ready(function() {
   var triesText = '';
 
   // HEELPER
-  var timeout;
-  var mouseStoped = false;
-  var hideHelper = false;
-  $(document).mousemove(function(e){
-    if(mouseStoped === true && hideHelper === false && endGame === false){
-      $(".helper").css({left:e.pageX+46, top:e.pageY});
-    }
-    clearTimeout(timeout);
-    timeout = setTimeout(function(){
-      mouseStoped = true;
-      hideHelper = false;
-      if(endGame === false){
+  if (window.matchMedia("(min-width: 1024px)").matches) {
+    var timeout;
+    var mouseStoped = false;
+    var hideHelper = false;
+    $(document).mousemove(function(e){
+      if(mouseStoped === true && hideHelper === false && endGame === false){
         $(".helper").css({left:e.pageX+46, top:e.pageY});
       }
-    }, 3000);
-  });
-  $('.tower-window').click(function () {
-    hideHelper = true;
-    $(".helper").css({left:'-999px', top:'-999px'});
-  })
+      clearTimeout(timeout);
+      timeout = setTimeout(function(){
+        mouseStoped = true;
+        hideHelper = false;
+        if(endGame === false){
+          $(".helper").css({left:e.pageX+46, top:e.pageY});
+        }
+      }, 3000);
+    });
+    $('.tower-window').click(function () {
+      hideHelper = true;
+      $(".helper").css({left:'-999px', top:'-999px'});
+    })
+  }
 
   // MODALS
   $('.modal-close').click(function () {
@@ -64,19 +66,19 @@ $( document ).ready(function() {
     }
     if(tries === 2){
       triesText = '<div class="modal__title">Уупс! К сожалению, не то окно:(</div>\n' +
-        '        <div class="modal__text">у Вас осталось 2 попытки!</div>';
+        '        <div class="modal__text">Попробуйте еще раз</div>';
     }
     if(tries === 1){
-      triesText = '<div class="modal__title">Увы и Ах но снова мимо...</div>\n' +
-        '        <div class="modal__text">у Вас осталась 1 попытка!</div>';
+      triesText = '<div class="modal__title">Увы и Ах, но промах...</div>\n' +
+        '        <div class="modal__text">У вас на одну попытку меньше</div>';
     }
     if(tries === 0){
       triesText = '<div class="modal__title">Хмм...может сегодня не ваш день?</div>\n' +
-        '        <div class="modal__text">Мы дадим последний шанс</div>';
+        '        <div class="modal__text">Поищите скидку в другом окошке</div>';
     }
     if($(this).hasClass('tower-window--7')){
       triesText = '<div class="modal__title">Миау конечно...Ну да ладно!</div>\n' +
-        '        <div class="modal__text">1 бонусная попытка - саааамая последняя</div>';
+        '        <div class="modal__text">От победы вас отделяет одно окошко</div>';
     }
     if(tries < 0){
       alert('No attemps left :(')

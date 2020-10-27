@@ -74,15 +74,19 @@ img, svg{
 /*topline*/
 .topline{
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 15px 0 15px;
 }
 .logo{
     position: absolute;
     top: 20px;
     left: 20px;
+    max-width: 70px;
     z-index: 2;
 }
 .heading{
-    padding-top: 30px;
     font-family: 'Creepster', cursive;
     font-size: 64px;
     line-height: 1em;
@@ -110,12 +114,26 @@ img, svg{
     -ms-transform: translate(-50%, 0);
     -o-transform: translate(-50%, 0);
     transform: translate(-50%, 0);
+    background: transparent url('img/window.svg') center bottom no-repeat;
+    background-size: contain;
     z-index: 100;
 }
+.tower-window--1{
+    background: transparent url('img/window-1.svg') center bottom no-repeat;
+    background-size: contain;
+}
 .tower-window__door{
-    width: 100%;
-    height: 100%;
-    background: transparent url('img/door.svg') center center no-repeat;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 80%;
+    height: 90%;
+    -webkit-transform: translate(-50%, 0);
+    -moz-transform: translate(-50%, 0);
+    -ms-transform: translate(-50%, 0);
+    -o-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+    background: transparent url('img/door.svg') center bottom no-repeat;
     background-size: contain;
 }
 .tower-window__door_opened:after{
@@ -124,8 +142,8 @@ img, svg{
     left: -55%;
     bottom: 0;
     width: 61%;
-    height: 104%;
-    background: transparent url('img/door-opened.svg') center center no-repeat;
+    height: 100%;
+    background: transparent url('img/door-opened.svg') center bottom no-repeat;
     background-size: contain;
 }
 .tower-window__door_opened{
@@ -164,8 +182,8 @@ img, svg{
 .tower-window--5,
 .tower-window--6,
 .tower-window--7{
-    width: 20%;
-    height: 8%;
+    width: 25%;
+    height: 9%;
 }
 .tower-window--3{
     top: 26.5%;
@@ -675,4 +693,88 @@ img, svg{
     font-size: 30px;
     line-height: 35px;
     color: #2B2A5D;
+}
+@media all and (min-width: 768px) and (max-width: 1024px){
+    .topline{
+        justify-content: space-between;
+    }
+    .logo{
+        position: static;
+    }
+    .tower{
+        height: 65vh;
+    }
+    .bottomline-item__text{
+        margin-right: 0;
+        margin-bottom: 15px;
+        text-align: center;
+    }
+}
+@media all and (min-width: 320px) and (max-width: 767px){
+    .wrapper:before {
+        bottom: 0;
+        width: 375px;
+        height: 104px;
+        margin-left: -190px;
+        background: transparent url(img/bg-bushes-mobile.png) center bottom no-repeat;
+    }
+    .topline{
+        justify-content: space-between;
+        padding: 15px;
+    }
+    .logo{
+        position: static;
+        max-width: 50px;
+    }
+    .heading{
+        font-size: 30px;
+    }
+    .tower{
+        bottom: 30px;
+        height: 85vh;
+    }
+    .bottomline{
+        padding: 15px;
+    }
+    .bottomline-item{
+        flex-direction: column;
+    }
+    .bottomline-item__text{
+        margin-right: 0;
+        margin-bottom: 15px;
+        text-align: center;
+        font-size: 18px;
+    }
+    .bottomline-item__text .dicount{
+        display: block;
+        font-size: 22px;
+    }
+    .tower-window.clicked{
+        z-index: 101;
+    }
+    .tower-window--1 .modal-lose,
+    .tower-window--3 .modal-lose,
+    .tower-window--5 .modal-lose{
+        top: 100%;
+        left: 50%;
+        right: auto;
+        -webkit-transform: translate(-50%, 0);
+        -moz-transform: translate(-50%, 0);
+        -ms-transform: translate(-50%, 0);
+        -o-transform: translate(-50%, 0);
+        transform: translate(-50%, 0);
+    }
+    .tower-window--7 .modal-lose{
+        bottom: 100%;
+        left: 50%;
+        right: auto;
+        -webkit-transform: translate(-50%, 0);
+        -moz-transform: translate(-50%, 0);
+        -ms-transform: translate(-50%, 0);
+        -o-transform: translate(-50%, 0);
+        transform: translate(-50%, 0);
+    }
+    .modal-lose:after{
+        display: none;
+    }
 }
