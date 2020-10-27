@@ -72,6 +72,13 @@
     background: -o-linear-gradient(357.85deg, #E59A30 15.86%, #DE4F45 91.06%), #E7A129;
     background: linear-gradient(92.15deg, #E59A30 15.86%, #DE4F45 91.06%), #E7A129;
   }
+  .game-banner__close{
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    cursor: pointer;
+    z-index: 3;
+  }
   @media all and (max-width: 768px){
     .game-banner{
       flex-direction: column;
@@ -91,6 +98,12 @@
 <body>
 
 <div class="game-banner">
+  <div class="game-banner__close" onclick="this.parentNode.remove()">
+    <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M1 1L17.6692 17.6692" stroke="#FFFFFF" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M17.6692 1L1 17.6692" stroke="#FFFFFF" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </div>
   <div class="game-banner__text">сыграй и получи скидку</div>
   <div class="game-banner__discount"><span>до</span>-50%</div>
   <a href="#" class="btn" target="_blank">ИГРАТЬ</a>
